@@ -1,0 +1,23 @@
+ # heartbeat every second
+ keepalive 1
+
+ #declare a host dead after 10 seconds
+ deadtime 10
+
+ # issue a late heartbeat warning after 5 seconds
+ warntime 5
+
+ # after reboot allow the network to come up before we initialize heartbeat again
+ initdead 120
+
+ # tell heartbeat what port and interface to use for heartbeats
+ udpport 694
+ bcast   eth1
+
+ # always return resources back to a primary node when it's available
+ auto_failback on
+
+
+ # declare our nodes
+ node    node1_hostname
+ node    node2_hostname
